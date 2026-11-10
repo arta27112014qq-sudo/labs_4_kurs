@@ -1,0 +1,12 @@
+# Отключаем просмотр содержимого папки (листинг)
+Options -Indexes
+
+# Отключаем выполнение PHP и других скриптов в этой папке
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+
+AddType text/plain .php .php3 .php4 .php5 .phtml .pl .py .jsp .asp .htm .shtml .sh .cgi
